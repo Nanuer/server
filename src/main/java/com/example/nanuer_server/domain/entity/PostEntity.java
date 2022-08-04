@@ -56,7 +56,7 @@ public class PostEntity extends BaseTimeEntity {
     @ToString.Exclude
     @JoinColumn(name = "category_id")
     @OneToOne
-    private Category category;
+    private CategoryEntity categoryEntity;
 
 
     public PostDto toDto(){
@@ -74,7 +74,7 @@ public class PostEntity extends BaseTimeEntity {
                 .time(time)
                 .postStatus(postStatus)
                 .userInfoDto(userEntity.toDto())
-                .categoryDto(category.toDto())
+                .categoryDto(categoryEntity.toDto())
                 .build();
         return postDto;
 

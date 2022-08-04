@@ -1,0 +1,5 @@
+server {
+        listen 80;
+        server_name ip주소;
+        return 301 http://도메인주소;
+}

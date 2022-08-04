@@ -28,9 +28,9 @@ public class PostController {
 
     /* 게시물 리스트 조회 */
     @GetMapping("")
-    public BaseResponse<List<PostEntity>> getPosts(@RequestParam int user_id) {
+    public BaseResponse<List<PostEntity>> getPosts(@RequestParam int userId) {
         try {
-            List<PostEntity> postEntities = postService.getPosts(user_id);
+            List<PostEntity> postEntities = postService.getPosts(userId);
 
             return new BaseResponse<>(postEntities);
         } catch (BaseException exception) {

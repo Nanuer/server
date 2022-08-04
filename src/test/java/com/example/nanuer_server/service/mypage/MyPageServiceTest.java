@@ -24,7 +24,7 @@ class MyPageServiceTest {
 
     @Test
     void getPosts(){
-        List<PostDto> postDtoList = myPageService.getPosts(3);
+        List<PostDto> postDtoList = myPageService.getMyPosts("dongwoo0307@naver.com");
         postDtoList.forEach(System.out::println);
     }
 

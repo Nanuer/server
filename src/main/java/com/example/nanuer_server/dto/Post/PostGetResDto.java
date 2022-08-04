@@ -1,6 +1,6 @@
 package com.example.nanuer_server.dto.Post;
 
-import com.example.nanuer_server.domain.entity.Category;
+import com.example.nanuer_server.domain.entity.CategoryEntity;
 import lombok.*;
 import com.example.nanuer_server.domain.entity.UserEntity;
 import java.time.LocalDateTime;
@@ -17,11 +17,11 @@ public class PostGetResDto {
     private String location;
     private LocalDateTime modified_date;
     private UserEntity userEntity;
-    private Category category;
+    private CategoryEntity categoryEntity;
 
     @Builder
     public PostGetResDto(int post_id, String title, int view, String progress, int total, String location,
-                         LocalDateTime modified_date, UserEntity userEntity, Category category) {
+                         LocalDateTime modified_date, UserEntity userEntity, CategoryEntity categoryEntity) {
         this.post_id = post_id;
         this.title = title;
         this.view = view;
@@ -30,7 +30,7 @@ public class PostGetResDto {
         this.location = location;
         this.modified_date = modified_date;
         this.userEntity = userEntity;
-        this.category = category;
+        this.categoryEntity = categoryEntity;
     }
 
     public PostGetResDto toEntity() {
@@ -43,7 +43,7 @@ public class PostGetResDto {
                 .location(location)
                 .modified_date(modified_date)
                 .userEntity(userEntity)
-                .category(category)
+                .category(categoryEntity)
                 .build();
     }
 

@@ -41,7 +41,7 @@ public class PostDto {
                 .time(time)
                 .postStatus(postStatus)
                 .userEntity(userInfoDto.toEntity())
-                .category(categoryDto.toEntity())
+                .categoryEntity(categoryDto.toEntity())
                 .build();
         return postEntity;
     }

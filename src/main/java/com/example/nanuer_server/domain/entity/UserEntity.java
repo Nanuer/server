@@ -62,7 +62,6 @@ public class UserEntity extends BaseTimeEntity {
     //mapped 이름 수정
     @JsonIgnore
     @OneToMany(mappedBy = "userEntity")
-    @Column(name = "posts")
     private List<PostEntity> postEntities = new ArrayList<>();
 
     @Enumerated(EnumType.STRING)

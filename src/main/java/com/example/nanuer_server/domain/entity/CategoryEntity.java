@@ -6,7 +6,7 @@ import lombok.*;
 
 import javax.persistence.*;
 
-@Table(name="category")
+@Table(name="categoryEntity")
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -14,7 +14,7 @@ import javax.persistence.*;
 @Entity
 @ToString(callSuper = true) // 부모 클래스의 toString 불러오는 어노테이션. 붙이면 createdAt 하고 updatedAt 데이터 정상적으로 나옴.
 @EqualsAndHashCode(callSuper = true) // 부모클래스의 equalsAndHashCode 불러오는 어노테이션.
-public class Category extends BaseTimeEntity{
+public class CategoryEntity extends BaseTimeEntity{
     @Id
     @Column(name="category_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
